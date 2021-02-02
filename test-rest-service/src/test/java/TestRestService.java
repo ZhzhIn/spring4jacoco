@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -11,12 +10,16 @@ import static io.restassured.RestAssured.given;
  */
 public class TestRestService {
     @Test
-    public void testRestService(){
+     void testRestService1(){
         given().when()
                 .get("http://127.0.0.1:8082/greeting").then()
         .statusCode(200);
+    }
+    @Test
+     void testRestService2(){
         given().when()
-                .get("http://127.0.0.1:8082/greeting?name=zhzhyin").then()
+                .get("http://127.0.0.1:8082/greeting2?test=zhzhyin").then()
                 .statusCode(200);
     }
+
 }
